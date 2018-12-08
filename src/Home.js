@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import ReacDOM from 'react-dom';
 
-class App extends Component {
+class Home extends Component {
     render() {
         return <div>
-            hellworld
+            Home
         </div>
     }
 }
-export default App;
+export default Home;
