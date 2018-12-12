@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a>one</a>
+    <a>one</a>
+    <a>one</a>
+
+    <script>
+        var elems=document.getElementsByTagName('a');
+        // for(var i=0;i<elems.length;i++){
+        //     elems[i].addEventListener('click',function(e){
+        //         e.preventDefault();
+        //         alert('Iam link #'+i);
+        //     }, false);
+        // }
+
+        for(var i=0;i<elems.length;i++){
+            (function(lockIndex){
+                elems[i].addEventListener('click',function(e){
+                    e.preventDefault();
+                    alert('Iam link #'+lockIndex);
+                }, false);
+            })(i);
+
+        }
+
+    </script>
+</body>
+</html>

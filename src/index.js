@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import {Route, Link, Switch, HashRouter, BrowserRouter, Redirect} from 'react-router-dom';
 import Home from "./Home";
 
+import UserGist from './ajax/UserGist';
+import MyComponent from './refs/MyComponent';
+
 const HomePage = () => <div>This is a Home Page</div>
 const LoginPage = () => <div>This is a Login Page</div>
 const RegisterPage = () => <div>This is a Register Page</div>
@@ -50,4 +53,15 @@ const App = () => (
     </BrowserRouter>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
+
+
+// 网络请求
+// ReactDOM.render(<UserGist source="https://api.github.com/users/octocat/gists"/>, document.getElementById("root"));
+
+
+//
+
+ReactDOM.render(
+    <MyComponent/>, document.getElementById("root")
+);
