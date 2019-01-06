@@ -37,3 +37,9 @@ console.info(move2({})); // [undefined, undefined]
 console.info(move2()); // [0, 0]
 
 //上面代码是为函数move的参数指定默认值，而不是为变量x和y指定默认值，所以会得到与前一种写法不同的结果。
+
+
+
+var {x: y = 2} = {};
+console.info("" + y);
+
